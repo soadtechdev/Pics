@@ -1,0 +1,119 @@
+.cont-img {
+  position: relative;
+}
+.cont-img::after {
+  content: "";
+  position: absolute;
+  width: 92%;
+  height: 0px;
+  display: block;
+  background: rgba(0, 0, 0, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.51) 44%,
+    rgba(0, 0, 0, 0.38) 55%,
+    rgba(0, 0, 0, 0.2) 71%,
+    rgba(158, 158, 158, 0) 89%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(0, 0, 0, 1)),
+    color-stop(44%, rgba(0, 0, 0, 0.51)),
+    color-stop(55%, rgba(0, 0, 0, 0.38)),
+    color-stop(71%, rgba(0, 0, 0, 0.2)),
+    color-stop(89%, rgba(158, 158, 158, 0)),
+    color-stop(100%, rgba(255, 255, 255, 0))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.51) 44%,
+    rgba(0, 0, 0, 0.38) 55%,
+    rgba(0, 0, 0, 0.2) 71%,
+    rgba(158, 158, 158, 0) 89%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.51) 44%,
+    rgba(0, 0, 0, 0.38) 55%,
+    rgba(0, 0, 0, 0.2) 71%,
+    rgba(158, 158, 158, 0) 89%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.51) 44%,
+    rgba(0, 0, 0, 0.38) 55%,
+    rgba(0, 0, 0, 0.2) 71%,
+    rgba(158, 158, 158, 0) 89%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.51) 44%,
+    rgba(0, 0, 0, 0.38) 55%,
+    rgba(0, 0, 0, 0.2) 71%,
+    rgba(158, 158, 158, 0) 89%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=0 );
+  z-index: 1;
+  top: 0px;
+  left: 12px;
+  transition: all 0.2s ease;
+}
+.cont-img p {
+  position: absolute;
+  top: 10px;
+  left: 23px;
+  z-index: 100;
+  color: #fff;
+  display: none;
+  transform: translateY(-16px);
+  transition: all 0.4s ease;
+}
+.cont-img:hover p {
+  display: block;
+  transform: translateY(2px);
+  transition: all 0.4s ease;
+}
+.cont-img:hover::after {
+  display: block;
+  height: 60px;
+  transition: all 0.2s ease;
+}
+
+.info-user img {
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 3;
+  display: none;
+}
+.cont-img .info-user h4 {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 30px;
+  right: 55px;
+  font-size: 15px;
+  color: #fff;
+  display: none;
+  transform: translateY(-16px);
+  transition: all 0.4s ease;
+}
+.cont-img:hover h4 {
+  display: block;
+}
+.cont-img:hover .info-user img {
+  display: block;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./ImageCard.css";
 
 export default class ImageCard extends Component {
   constructor(props) {
@@ -21,10 +22,23 @@ export default class ImageCard extends Component {
   };
 
   render() {
-    const { description, urls } = this.props.image;
+    const { description, urls, likes, user, links } = this.props.image;
     return (
-      <div style={{ gridRowEnd: `span ${this.state.spans}` }}>
+      <div
+        className="cont-img"
+        style={{ gridRowEnd: `span ${this.state.spans}` }}
+      >
         <img ref={this.imageRef} alt={description} src={urls.regular} />
+        <p>
+          <span>
+            <i className="far fa-star"></i>
+          </span>{" "}
+          {likes}
+        </p>
+        <div className="info-user">
+          <h4 className="username">{user.username}</h4>
+          <img src={user.profile_image.medium} alt={user.username} />
+        </div>
       </div>
     );
   }
